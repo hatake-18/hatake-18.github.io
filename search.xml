@@ -8,6 +8,9 @@
       <categories>
         <category>chromium</category>
       </categories>
+      <tags>
+        <tag>chromium</tag>
+      </tags>
   </entry>
   <entry>
     <title>bottom-up-attention环境配置</title>
