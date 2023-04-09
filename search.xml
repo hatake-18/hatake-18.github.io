@@ -80,7 +80,8 @@
   <entry>
     <title>跨模态检索相关文章</title>
     <url>/2023/04/09/1002-papers-bout-cross-modal-retrival/</url>
-    <content><![CDATA[<p>跨模态检索相关文章<br><strong>GSMN</strong>  <a href="https://arxiv.org/pdf/2004.00277.pdf">Graph Structured Network for Image-Text Matching</a><br>CVPR 2020 <a href="https://github.com/CrossmodalGroup/GSMN">code</a></p>
+    <content><![CDATA[<span id="more"></span>
+<p>跨模态检索相关文章<br><strong>GSMN</strong>  <a href="https://arxiv.org/pdf/2004.00277.pdf">Graph Structured Network for Image-Text Matching</a><br>CVPR 2020 <a href="https://github.com/CrossmodalGroup/GSMN">code</a></p>
 <p>Saliency-Guided Attention Network for Image-Sentence Matching<br>ECCV 2019</p>
 <p><a href="http://xxx.itp.ac.cn/abs/2004.00277">Graph Structured Network for Image-Text Matching</a><br>CVPR 2020 </p>
 <p><a href="http://xxx.itp.ac.cn/abs/1909.02701">Visual Semantic Reasoning for Image-Text Matching</a><br>ICCV 2019</p>
