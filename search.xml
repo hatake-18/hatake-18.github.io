@@ -64,7 +64,7 @@
   </entry>
   <entry>
     <title>cpp big three functions</title>
-    <url>/2021/04/09/0999-cpp-big-three/</url>
+    <url>/2020/04/09/0999-cpp-big-three/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">String</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// ctor</span></span><br><span class="line">  <span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span> *cstr = <span class="number">0</span>);</span><br><span class="line">  <span class="comment">// copy ctor</span></span><br><span class="line">  <span class="built_in">String</span>(<span class="type">const</span> String &amp;str);</span><br><span class="line">  <span class="comment">// copy op=</span></span><br><span class="line">  String &amp;<span class="keyword">operator</span>=(<span class="type">const</span> String &amp;str);</span><br><span class="line">  ~<span class="built_in">String</span>();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Big-Three"><a href="#Big-Three" class="headerlink" title="Big Three"></a>Big Three</h3><ol>
 <li>编译器默认的<code>copy ctor</code>和<code>copy op=</code>都是<strong>bit by bit</strong>拷贝，类中含有指针时会有内存泄露</li>
