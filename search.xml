@@ -116,4 +116,15 @@
         <tag>Notes</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git-bash配置代理</title>
+    <url>/2024/12/19/0996-git-bash-proxy-setup-on-win/</url>
+    <content><![CDATA[<h1 id="Part-1-primitives"><a href="#Part-1-primitives" class="headerlink" title="Part 1: primitives"></a>Part 1: primitives</h1>]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>环境配置</tag>
+      </tags>
+  </entry>
 </search>
