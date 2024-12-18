@@ -119,7 +119,12 @@
   <entry>
     <title>git-bash配置代理</title>
     <url>/2024/12/19/0996-git-bash-proxy-setup-on-win/</url>
-    <content><![CDATA[<h1 id="Part-1-primitives"><a href="#Part-1-primitives" class="headerlink" title="Part 1: primitives"></a>Part 1: primitives</h1>]]></content>
+    <content><![CDATA[<h3 id="HTTP-x2F-HTTPS"><a href="#HTTP-x2F-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.gitconfig</span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = http://127.0.0.1:10821</span><br><span class="line">[https]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = https://127.0.0.1:10821</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH协议"><a href="#SSH协议" class="headerlink" title="SSH协议"></a>SSH协议</h3><blockquote>
+<p>仅配置上面的，<code>git clone ***.git</code>会有问题，仍然不会走代理</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line">   IdentityFile <span class="string">&quot;C:\Users\hatak\.ssh\id_ed25519&quot;</span></span><br><span class="line">   ProxyCommand connect.exe -H 127.0.0.1:10821 %h %p</span><br><span class="line"><span class="comment"># -H后是http代理   </span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>环境配置</category>
       </categories>
