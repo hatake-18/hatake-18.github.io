@@ -117,7 +117,7 @@
       </tags>
   </entry>
   <entry>
-    <title>git-bash配置代理</title>
+    <title>Git配置代理</title>
     <url>/2024/12/19/0996-git-bash-proxy-setup-on-win/</url>
     <content><![CDATA[<h3 id="HTTP-x2F-HTTPS"><a href="#HTTP-x2F-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.gitconfig</span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = http://127.0.0.1:10821</span><br><span class="line">[https]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = https://127.0.0.1:10821</span><br></pre></td></tr></table></figure>
 
