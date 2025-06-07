@@ -136,11 +136,19 @@
       </tags>
   </entry>
   <entry>
-    <title>[M132] chromium codelab</title>
-    <url>/2025/05/05/0995-chromium-codelab/</url>
-    <content><![CDATA[<h3 id="Exercise-0-“Hello-World-”"><a href="#Exercise-0-“Hello-World-”" class="headerlink" title="Exercise 0: “Hello World!”"></a>Exercise 0: “Hello World!”</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>[M132][Part_1] chromium codelab</title>
+    <url>/2024/05/05/0995-chromium-codelab/</url>
+    <content><![CDATA[<h2 id="Prerequisite-Getting-the-Code"><a href="#Prerequisite-Getting-the-Code" class="headerlink" title="Prerequisite: Getting the Code"></a>Prerequisite: Getting the Code</h2><p>略</p>
+<h2 id="Part-1-Using-command-line-arguments"><a href="#Part-1-Using-command-line-arguments" class="headerlink" title="Part 1: Using command-line arguments"></a>Part 1: Using command-line arguments</h2><p><code>main</code>函数开头需要加上下面的代码设置下日志的输出方式</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">logging::LoggingSettings settings;</span><br><span class="line">settings.logging_dest = logging::LOG_TO_ALL;  <span class="comment">// 默认就是控制台</span></span><br><span class="line">settings.log_file_path = <span class="built_in">FILE_PATH_LITERAL</span>(<span class="string">&quot;hello_world.log&quot;</span>);</span><br><span class="line">logging::<span class="built_in">InitLogging</span>(settings);</span><br></pre></td></tr></table></figure>
 
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ol>
+<h2 id="Part-2-Callbacks-and-Bind"><a href="#Part-2-Callbacks-and-Bind" class="headerlink" title="Part 2: Callbacks and Bind"></a>Part 2: Callbacks and Bind</h2><p>是个<code>move-only</code>对象</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// The type of a callback that:</span></span><br><span class="line"><span class="comment">//  - Can run only once.</span></span><br><span class="line"><span class="comment">//  - Is move-only and non-copyable.</span></span><br><span class="line"><span class="comment">//  - Takes no arguments and does not return anything.</span></span><br><span class="line"><span class="comment">// base::OnceClosure is an alias of this type.</span></span><br><span class="line">base::OnceCallback&lt;<span class="built_in">void</span>()&gt;</span><br></pre></td></tr></table></figure>
+
+<p>执行的时候要加<code>std::move</code></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">MyFunction1</span><span class="params">(base::OnceCallback&lt;<span class="type">int</span>(std::string, <span class="type">double</span>)&gt; my_callback)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// OnceCallback</span></span><br><span class="line">  <span class="type">int</span> result1 = std::<span class="built_in">move</span>(my_callback).<span class="built_in">Run</span>(<span class="string">&quot;my string 1&quot;</span>, <span class="number">1.0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// After running a OnceCallback, it&#x27;s consumed and nulled out.</span></span><br><span class="line">  <span class="built_in">DCHECK</span>(!my_callback);</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a href="https://chromium.googlesource.com/chromium/src/+/HEAD/codelabs/cpp101/README.md">C++ in Chromium 101 - Codelab</a></li>
 <li><a href="https://gn.googlesource.com/gn/+/refs/heads/main/docs/language.md#Targets">GN Language and Operation</a></li>
 </ol>
