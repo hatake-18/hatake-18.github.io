@@ -138,7 +138,11 @@
   <entry>
     <title>[M132] chromium codelab</title>
     <url>/2025/05/05/0995-chromium-codelab/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Exercise-0-“Hello-World-”"><a href="#Exercise-0-“Hello-World-”" class="headerlink" title="Exercise 0: “Hello World!”"></a>Exercise 0: “Hello World!”</h1><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a href="https://chromium.googlesource.com/chromium/src/+/HEAD/codelabs/cpp101/README.md">C++ in Chromium 101 - Codelab</a></li>
+<li><a href="https://gn.googlesource.com/gn/+/refs/heads/main/docs/language.md#Targets">GN Language and Operation</a></li>
+</ol>
+]]></content>
       <categories>
         <category>chromium</category>
       </categories>
