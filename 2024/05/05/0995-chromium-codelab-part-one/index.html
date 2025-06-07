@@ -28,7 +28,7 @@
 <meta property="og:description" content="chromium codelab demo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-05T10:43:56.000Z">
-<meta property="article:modified_time" content="2025-06-07T17:50:12.658Z">
+<meta property="article:modified_time" content="2025-06-07T17:53:48.454Z">
 <meta property="article:author" content="liu-hx">
 <meta property="article:tag" content="chromium">
 <meta name="twitter:card" content="summary">
@@ -220,7 +220,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-06-08 01:50:12" itemprop="dateModified" datetime="2025-06-08T01:50:12+08:00">2025-06-08</time>
+                <time title="修改时间：2025-06-08 01:53:48" itemprop="dateModified" datetime="2025-06-08T01:53:48+08:00">2025-06-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,6 +254,16 @@
 <p>执行的时候要加<code>std::move</code></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">MyFunction1</span><span class="params">(base::OnceCallback&lt;<span class="type">int</span>(std::string, <span class="type">double</span>)&gt; my_callback)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// OnceCallback</span></span><br><span class="line">  <span class="type">int</span> result1 = std::<span class="built_in">move</span>(my_callback).<span class="built_in">Run</span>(<span class="string">&quot;my string 1&quot;</span>, <span class="number">1.0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// After running a OnceCallback, it&#x27;s consumed and nulled out.</span></span><br><span class="line">  <span class="built_in">DCHECK</span>(!my_callback);</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="Part-3-Threads-and-task-runners"><a href="#Part-3-Threads-and-task-runners" class="headerlink" title="Part 3: Threads and task runners"></a>Part 3: Threads and task runners</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/main/docs/threading_and_tasks.md">Threading and Tasks in Chrome</a></p>
+</blockquote>
+<p>There are a number of ways to post tasks to a thread pool or task runner.</p>
+<ul>
+<li><code>PostTask()</code></li>
+<li><code>PostDelayedTask()</code> if you want to add a delay.</li>
+<li><code>PostTaskAndReply()</code> lets you post a task which will post a task back to your current thread when its done.</li>
+<li><code>PostTaskAndReplyWithResult()</code> to automatically pass the return value of the first call as argument to the second call.</li>
+</ul>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/HEAD/codelabs/cpp101/README.md">C++ in Chromium 101 - Codelab</a></li>
 <li><a target="_blank" rel="noopener" href="https://gn.googlesource.com/gn/+/refs/heads/main/docs/language.md#Targets">GN Language and Operation</a></li>
@@ -341,7 +351,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisite-Getting-the-Code"><span class="nav-number">1.</span> <span class="nav-text">Prerequisite: Getting the Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-1-Using-command-line-arguments"><span class="nav-number">2.</span> <span class="nav-text">Part 1: Using command-line arguments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2-Callbacks-and-Bind"><span class="nav-number">3.</span> <span class="nav-text">Part 2: Callbacks and Bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisite-Getting-the-Code"><span class="nav-number">1.</span> <span class="nav-text">Prerequisite: Getting the Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-1-Using-command-line-arguments"><span class="nav-number">2.</span> <span class="nav-text">Part 1: Using command-line arguments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2-Callbacks-and-Bind"><span class="nav-number">3.</span> <span class="nav-text">Part 2: Callbacks and Bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-3-Threads-and-task-runners"><span class="nav-number">4.</span> <span class="nav-text">Part 3: Threads and task runners</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
