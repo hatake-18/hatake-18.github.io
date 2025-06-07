@@ -137,7 +137,7 @@
   </entry>
   <entry>
     <title>[M132][Part_1] chromium codelab</title>
-    <url>/2024/05/05/0995-chromium-codelab/</url>
+    <url>/2024/05/05/0995-chromium-codelab-part-one/</url>
     <content><![CDATA[<h2 id="Prerequisite-Getting-the-Code"><a href="#Prerequisite-Getting-the-Code" class="headerlink" title="Prerequisite: Getting the Code"></a>Prerequisite: Getting the Code</h2><p>略</p>
 <h2 id="Part-1-Using-command-line-arguments"><a href="#Part-1-Using-command-line-arguments" class="headerlink" title="Part 1: Using command-line arguments"></a>Part 1: Using command-line arguments</h2><p><code>main</code>函数开头需要加上下面的代码设置下日志的输出方式</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">logging::LoggingSettings settings;</span><br><span class="line">settings.logging_dest = logging::LOG_TO_ALL;  <span class="comment">// 默认就是控制台</span></span><br><span class="line">settings.log_file_path = <span class="built_in">FILE_PATH_LITERAL</span>(<span class="string">&quot;hello_world.log&quot;</span>);</span><br><span class="line">logging::<span class="built_in">InitLogging</span>(settings);</span><br></pre></td></tr></table></figure>
