@@ -230,6 +230,7 @@
             </span>
 
           
+            <div class="post-description">chromium codelab demo</div>
 
         </div>
       </header>
@@ -240,15 +241,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>chromium codelab demo</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/05/05/0995-chromium-codelab/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          
       
     </div>
 
@@ -305,6 +298,7 @@
             </span>
 
           
+            <div class="post-description">Git配置代理</div>
 
         </div>
       </header>
@@ -315,15 +309,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Git配置代理</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/12/19/0996-git-bash-proxy-setup-on-win/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h3 id="HTTP-x2F-HTTPS"><a href="#HTTP-x2F-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><blockquote>
+<p>适用于<strong>http</strong>协议：<code>git clone http://***.git</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.gitconfig</span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = http://127.0.0.1:10821</span><br><span class="line">[https]</span><br><span class="line">        proxy = socks5://127.0.0.1:10820</span><br><span class="line">        proxy = https://127.0.0.1:10821</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH协议"><a href="#SSH协议" class="headerlink" title="SSH协议"></a>SSH协议</h3><blockquote>
+<p>适用于<strong>ssh</strong>协议<code>git clone git@***.git</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line">   IdentityFile <span class="string">&quot;C:\Users\hatak\.ssh\id_ed25519&quot;</span></span><br><span class="line">   ProxyCommand connect.exe -H 127.0.0.1:10821 %h %p</span><br><span class="line"><span class="comment"># -H后是http代理   </span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -380,6 +374,7 @@
             </span>
 
           
+            <div class="post-description">life of a pixel in chromium</div>
 
         </div>
       </header>
@@ -390,15 +385,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>life of a pixel in chromium</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/09/0997-life-of-a-pixel/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <blockquote>
+<p> 原版视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1W44y1S7TJ/">B站 中文字幕 life of a pixel</a></p>
+</blockquote>
+
       
     </div>
 
@@ -461,6 +451,7 @@
             </span>
 
           
+            <div class="post-description">内存管理</div>
 
         </div>
       </header>
@@ -471,15 +462,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>内存管理</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/09/0997-houjie-mem-mange/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <blockquote>
+<p>胸中自有丘壑</p>
+</blockquote>
+<h1 id="Part-1-primitives"><a href="#Part-1-primitives" class="headerlink" title="Part 1: primitives"></a>Part 1: primitives</h1>
       
     </div>
 
@@ -533,6 +519,7 @@
               </span>
 
           
+            <div class="post-description">brief intro to hexo</div>
 
         </div>
       </header>
@@ -543,15 +530,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>brief intro to hexo</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/12/06/1001-hello-world/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
       
     </div>
 
@@ -614,6 +606,7 @@
             </span>
 
           
+            <div class="post-description">how to build the bottom-up-attention environment</div>
 
         </div>
       </header>
@@ -624,15 +617,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>how to build the bottom-up-attention environment</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/04/09/0998-bottom-up-attention/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p><a target="_blank" rel="noopener" href="https://github.com/peteanderson80/bottom-up-attention">bottom-up-attention代码地址</a><br>尝试过直接在conda配置环境，然后代码年代久远，最后还是使用docker才配置成功</p>
+<h3 id="docker配置"><a href="#docker配置" class="headerlink" title="docker配置"></a>docker配置</h3><p>docker镜像 <code>docker pull bvlc/caffe</code></p>
+<p>Makefile修改 参考<a target="_blank" rel="noopener" href="https://www.codeleading.com/article/61395175040/">https://www.codeleading.com/article/61395175040/</a><br>注：<code>LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl hdf5_serial</code>不用添加</p>
+<p>报错<code>ImportError: cannot import name &#39;_validate_lengths</code><br>运行<code>pip install --upgrade scikit-image</code></p>
+<p>报错<code>ImportError: No module named _tkinter, please install the python-tk package</code><br>运行<code>apt-get install the python-tk package</code></p>
+<p>参考链接</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/46616371">https://zhuanlan.zhihu.com/p/46616371</a><br><img src="https://s2.loli.net/2024/07/26/IJu7pmqCgtfKP8F.jpg"><br><img src="https://cf.hatake18.top/hatake-img/2024/07/b258a1d60a2200113853607379a3bf65.jpg"></li>
+</ol>
+
       
     </div>
 
@@ -695,6 +689,7 @@
             </span>
 
           
+            <div class="post-description">trivial things bout big-three</div>
 
         </div>
       </header>
@@ -705,15 +700,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>trivial things bout big-three</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/09/0999-cpp-big-three/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">String</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// ctor</span></span><br><span class="line">  <span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span> *cstr = <span class="number">0</span>);</span><br><span class="line">  <span class="comment">// copy ctor</span></span><br><span class="line">  <span class="built_in">String</span>(<span class="type">const</span> String &amp;str);</span><br><span class="line">  <span class="comment">// copy op=</span></span><br><span class="line">  String &amp;<span class="keyword">operator</span>=(<span class="type">const</span> String &amp;str);</span><br><span class="line">  ~<span class="built_in">String</span>();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Big-Three"><a href="#Big-Three" class="headerlink" title="Big Three"></a>Big Three</h3><ol>
+<li>编译器默认的<code>copy ctor</code>和<code>copy op=</code>都是<strong>bit by bit</strong>拷贝，类中含有指针时会有内存泄露</li>
+<li>为什么<code>copy op=</code>返回引用<ul>
+<li>非必须，为了链式赋值使用，参考<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/3105798/why-must-the-copy-assignment-operator-return-a-reference-const-reference#:~:text=If%20you%20return%20a%20reference,assignment%20operator%20is%20called!!">stackoverflow.com</a></li>
+</ul>
+</li>
+<li>注意函数参数和返回值</li>
+</ol>
+<h3 id="Rvalue-references-and-Move-Semantics"><a href="#Rvalue-references-and-Move-Semantics" class="headerlink" title="Rvalue references and Move Semantics"></a>Rvalue references and Move Semantics</h3>
       
     </div>
 
@@ -776,6 +772,7 @@
             </span>
 
           
+            <div class="post-description">比较早的跨模态检索相关文章</div>
 
         </div>
       </header>
@@ -786,15 +783,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>比较早的跨模态检索相关文章</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/17/1002-papers-bout-cross-modal-retrival/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <span id="more"></span>
+<p>跨模态检索相关文章<br><strong>GSMN</strong>  <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2004.00277.pdf">Graph Structured Network for Image-Text Matching</a><br>CVPR 2020 <a target="_blank" rel="noopener" href="https://github.com/CrossmodalGroup/GSMN">code</a></p>
+<p>Saliency-Guided Attention Network for Image-Sentence Matching<br>ECCV 2019</p>
+<p><a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/abs/2004.00277">Graph Structured Network for Image-Text Matching</a><br>CVPR 2020 </p>
+<p><a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/abs/1909.02701">Visual Semantic Reasoning for Image-Text Matching</a><br>ICCV 2019</p>
+<p><a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/pdf/1803.08024v2">Stacked Cross Attention for Image-Text Matching</a><br>ECCV 2018</p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.05612">VSE++: Improving Visual-Semantic Embeddings with Hard Negatives</a><br>BMVC 2018</p>
+<p><a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/pdf/2003.03669v3">Adaptive Offline Quintuplet Loss for Image-Text Matching</a><br>ECCV 2020<br><strong>摘要</strong> ：文章提出了一种新的五元组损失</p>
+<p><a target="_blank" rel="noopener" href="http://xxx.itp.ac.cn/pdf/2003.03772v1">IMRAM: Iterative Matching with Recurrent Attention Memory for Cross-Modal Image-Text Retrieval</a><br>ECCV 2020<br><strong>摘要</strong> ：</p>
+<p>Unsupervised Generative Adversarial Cross-Modal Hashing<br>AAAI 2018<br>GAN</p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2004.00280">Creating Something from Nothing: Unsupervised Knowledge Distillation for Cross-Modal Hashing</a><br>CVPR 2020<br>Knowledge Distillation</p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1602.02255">Deep Cross-Modal Hashing</a><br>CVPR 2017<br>经典的深度哈希文章</p>
+
       
     </div>
 
@@ -857,6 +858,7 @@
             </span>
 
           
+            <div class="post-description">踩坑</div>
 
         </div>
       </header>
@@ -867,15 +869,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>踩坑</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/11/1000-size-function-in-cpp/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; a.<span class="built_in">size</span>() - <span class="number">1</span>; i++)</span><br><span class="line">        cout &lt;&lt; a.<span class="built_in">size</span>() - <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>a.size()返回一个无符号整型，当a的大小是0时，a.size() - 1返回一个正数，导致访问越界。</p>
+
       
     </div>
 
